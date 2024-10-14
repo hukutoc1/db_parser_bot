@@ -3,5 +3,9 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (lab-2)" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (bd_parser)" project-jdk-type="Python SDK" />
+>>>>>>> 14bf292 (updated old database funcs, added some bot funcs, added find function, wrote comments, little designed code)
 </project>
