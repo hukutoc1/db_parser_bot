@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-from database_funcs import database_create, db_colomn_add
-
-
-'''
-EXAMPLE of using imported functions
-columns = [{'NAME': 'id',
-            'TYPE': 'INTEGER',
-            'NOT NULL': True,
-            'UNIQUE': True,
-            'AUTOINCREMENT': True}]
-
-database_create('2.db', 'Main',columns)
-
-new_column = {'NAME': 'number',
-              'TYPE': 'INTEGER',
-              'NOT NULL': True,}
-
-db_colomn_add('2.db', 'Main', new_column)'''
-=======
 import csv
 from database_funcs import *
 import telebot
 from bot_funcs import inline_kb_generate
 from keybord_prototype import admin_main_kb
+
+# all imports
 
 
 '''CONFIGS'''
@@ -33,6 +15,7 @@ users_data_fn = ['id', 'user_name', 'status']
 # ---------------------------------------------------------------------------
 
 
+# START REACTION
 # ---------------------------------------------------------------------------
 @bot.message_handler(commands=['start'])
 def start_bot(message):
@@ -68,6 +51,7 @@ def start_bot(message):
                   f'{message.from_user.username}')  # signing in log
 
 
+# CALLBACK REACTION
 # ---------------------------------------------------------------------------
 @bot.callback_query_handler(func=lambda call: True)
 def callback_handler(call):
@@ -77,6 +61,7 @@ def callback_handler(call):
         bot.send_message(call.from_user.id, 'Введите запрос')
 
 
+# QUERY HANDLER FOR SEARCHING
 # ---------------------------------------------------------------------------
 @bot.message_handler()
 def query_handler(message):
@@ -91,4 +76,3 @@ def query_handler(message):
 
 
 bot.infinity_polling()
->>>>>>> 14bf292 (updated old database funcs, added some bot funcs, added find function, wrote comments, little designed code)
