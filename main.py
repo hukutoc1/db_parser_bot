@@ -9,7 +9,7 @@ from keybord_prototype import admin_main_kb
 
 '''CONFIGS'''
 # ---------------------------------------------------------------------------
-BOT_TOKEN = '8143873250:AAEoCIPKPPRri394EKS2eG5-u8oQ5U-eq70'
+BOT_TOKEN = input()
 bot = telebot.TeleBot(BOT_TOKEN)
 users_data_fn = ['id', 'user_name', 'status']
 # ---------------------------------------------------------------------------
